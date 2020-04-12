@@ -1,0 +1,11 @@
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\bin\Debug\netcoreapp3.1\BigChungusXXL.deps.json
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\bin\Debug\netcoreapp3.1\BigChungusXXL.runtimeconfig.json
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\bin\Debug\netcoreapp3.1\BigChungusXXL.runtimeconfig.dev.json
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\bin\Debug\netcoreapp3.1\BigChungusXXL.dll
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\bin\Debug\netcoreapp3.1\BigChungusXXL.pdb
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.csprojAssemblyReference.cache
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.AssemblyInfoInputs.cache
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.AssemblyInfo.cs
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.dll
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.pdb
+D:\wikispeida\src\lambda\BigChungusXXL\BigChungusXXL\obj\Debug\netcoreapp3.1\BigChungusXXL.genruntimeconfig.cache
