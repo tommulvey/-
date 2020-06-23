@@ -19,13 +19,13 @@ using System.Net;
 namespace WikiSpeedia.Controllers
 {
 
-    [Route("v1/PageTextById")]
-    public class PageTextByIdController : Controller
+    [Route("v1/PageIdByTitle")]
+    public class PageIdByTitleController : Controller
     {
         //repo
         public IPageRepository PageRepository { get; }
 
-        public PageTextByIdController()
+        public PageIdByTitleController()
         {
             //DI
             var resolver = new DependencyResolver(ConfigureServices);
@@ -41,12 +41,12 @@ namespace WikiSpeedia.Controllers
         }
 
         // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        [HttpGet("{title}")]
+        public IActionResult Get(string title)
         {
-            var result = PageRepository.GetPageTextById(id);
+            var result = PageRepository.GetPageIdByTitle(title);
             if(result.Result == null){
-                return BadRequest("Invalid id stepbro");
+                return BadRequest("Invalid title steppie");
             }
             return Ok(result.Result);
             //return Ok();

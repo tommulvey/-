@@ -28,9 +28,9 @@ namespace WikiSpeedia.Repos
             //return await Context.Pages.SingleOrDefaultAsync(e => e.id == id);
         }
 
-        public async Task<Page> GetPageIdByTitle(string title)
+        public async Task<int> GetPageIdByTitle(string title)
         {
-            return await Context.Pages.SingleOrDefaultAsync(e => e.title == title);
+            return await GetAllPages().Where(item => item.title == title).Select(item => item.id).FirstOrDefaultAsync();
         }
 
         public async Task<string> GetPageTextById(int id)
@@ -38,9 +38,9 @@ namespace WikiSpeedia.Repos
             return await GetAllPages().Where(item => item.id == id).Select(item => item.text).FirstOrDefaultAsync();
         }
 
-        public async Task<Page> GetPageTextByTitle(string title)
+        public async Task<string> GetPageTextByTitle(string title)
         {
-            return await Context.Pages.SingleOrDefaultAsync(e => e.title == title);
+            return await GetAllPages().Where(item => item.title == title).Select(item => item.text).FirstOrDefaultAsync();
         }
     }
 }
