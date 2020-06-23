@@ -33,9 +33,9 @@ namespace WikiSpeedia.Repos
             return await Context.Pages.SingleOrDefaultAsync(e => e.title == title);
         }
 
-        public async Task<Page> GetPageTextById(int id)
+        public async Task<string> GetPageTextById(int id)
         {
-            return await Context.Pages.SingleOrDefaultAsync(e => e.id == id);
+            return await GetAllPages().Where(item => item.id == id).Select(item => item.text).FirstOrDefaultAsync();
         }
 
         public async Task<Page> GetPageTextByTitle(string title)
