@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MySql.Data.EntityFrameworkCore;
 using WikiSpeedia.Abstractions;
 namespace WikiSpeedia.Objects
 {
@@ -14,9 +15,9 @@ namespace WikiSpeedia.Objects
         {
             var page = new Page
             {
-                id = 0,
-                title = "biggiecheese",
-                text = "biggie cheese is a world wide phenomenon"
+                id = 2,
+                title = "August",
+                text = "yo"
             };
             modelBuilder.Entity<Page>().HasData(page);
         }

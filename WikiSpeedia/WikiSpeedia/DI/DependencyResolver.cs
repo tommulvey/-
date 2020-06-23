@@ -7,6 +7,7 @@ using WikiSpeedia.Abstractions;
 using WikiSpeedia.Repos;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using MySql.Data.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace WikiSpeedia.DI
@@ -42,7 +43,7 @@ namespace WikiSpeedia.DI
                 var connectionString = configService.GetConfiguration().GetConnectionString(nameof(MSSQLDbContext));
                 System.Console.WriteLine("KEY MSSQLDbContext = " + connectionString);
                 var optionsBuilder = new DbContextOptionsBuilder<MSSQLDbContext>();
-                optionsBuilder.UseSqlServer(connectionString, builder => builder.MigrationsAssembly("NetCoreLambda.EF.Design"));
+                optionsBuilder.UseMySQL(connectionString, builder => builder.MigrationsAssembly("NetCoreLambda.EF.Design"));
                 return new MSSQLDbContext(optionsBuilder.Options);
             });
 

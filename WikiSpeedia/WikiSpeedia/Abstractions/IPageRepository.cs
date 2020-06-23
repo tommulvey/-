@@ -8,7 +8,9 @@ namespace WikiSpeedia.Abstractions
 {
     public interface IPageRepository
     {
-        Task<Page> GetPageById(int id); // get a wiki page based off of ID
-        Task<Page> GetPageByName(string name); // get a wiki page by article name (clicked from ahref :P )
+        Task<Page> GetPageTitleById(int id); // get a wiki page tile based off of ID
+        Task<Page> GetPageIdByTitle(string name); // get a wiki page id by article name (clicked from ahref :P )
+        Task<Page> GetPageTextById(int id); // get a wiki page text based off of ID
+        Task<Page> GetPageTextByTitle(string name); // get a wiki page text by article name (clicked from ahref :P )
     }
 }

@@ -50,9 +50,10 @@ namespace WikiSpeedia.Controllers
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var result = PageRepository.GetPageTitleById(id);
+            return Ok(result);
         }
 
         // most of our app is just reading. atleast for pages. only gets for now :) 
