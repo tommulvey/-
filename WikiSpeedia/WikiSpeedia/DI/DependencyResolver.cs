@@ -26,7 +26,7 @@ namespace WikiSpeedia.DI
             ServiceProvider = serviceCollection.BuildServiceProvider();
         }
 
-        private void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             //register end and config services
             services.AddTransient<IEnviornmentService, EnviornmentService>();
@@ -40,6 +40,7 @@ namespace WikiSpeedia.DI
             {
                 var configService = provider.GetService<IConfigurationService>();
                 var connectionString = configService.GetConfiguration().GetConnectionString(nameof(MSSQLDbContext));
+                System.Console.WriteLine("KEY MSSQLDbContext = " + connectionString);
                 var optionsBuilder = new DbContextOptionsBuilder<MSSQLDbContext>();
                 optionsBuilder.UseSqlServer(connectionString, builder => builder.MigrationsAssembly("NetCoreLambda.EF.Design"));
                 return new MSSQLDbContext(optionsBuilder.Options);

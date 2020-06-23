@@ -63,7 +63,20 @@
           "lib/netstandard2.0/Amazon.Lambda.Logging.AspNetCore.dll": {}
         }
       },
-      "Amazon.Lambda.Serialization.SystemTextJson/2.0.0": {
+      "Amazon.Lambda.Serialization.Json/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.Core": "1.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {}
+        }
+      },
+      "Amazon.Lambda.Serialization.SystemTextJson/2.0.1": {
         "type": "package",
         "dependencies": {
           "Amazon.Lambda.Core": "1.1.0"
@@ -418,6 +431,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1438,14 +1460,29 @@
         "lib/netstandard2.0/Amazon.Lambda.Logging.AspNetCore.xml"
       ]
     },
-    "Amazon.Lambda.Serialization.SystemTextJson/2.0.0": {
-      "sha512": "En67XZpjBILNrLdb/7HqGtqkPjoRYDjViY4+PEn1CAe53FNStU/vbcVtDvDyvQeUnFgMui3zvMdlsjJIzBPHdQ==",
+    "Amazon.Lambda.Serialization.Json/1.7.0": {
+      "sha512": "R2PD+JZnLuCnP3f8sTZEGyVexeVWxIJqQbVUbZJIEjrElE8Dbx0zTMXxKr1w1AdhRsZvL3HXpIvYywRHChPQig==",
       "type": "package",
-      "path": "amazon.lambda.serialization.systemtextjson/2.0.0",
+      "path": "amazon.lambda.serialization.json/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "amazon.lambda.serialization.systemtextjson.2.0.0.nupkg.sha512",
+        "amazon.lambda.serialization.json.1.7.0.nupkg.sha512",
+        "amazon.lambda.serialization.json.nuspec",
+        "lib/netstandard1.3/Amazon.Lambda.Serialization.Json.dll",
+        "lib/netstandard1.3/Amazon.Lambda.Serialization.Json.xml",
+        "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll",
+        "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.xml"
+      ]
+    },
+    "Amazon.Lambda.Serialization.SystemTextJson/2.0.1": {
+      "sha512": "WPtMxw5jwEcVbe0Ro/bF0VDnict/zoCW0r6dfRIIOthjO+fVMgDyGYa4Pkz6ptgCCFcnhQuOq6iebYw1LRZeIQ==",
+      "type": "package",
+      "path": "amazon.lambda.serialization.systemtextjson/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amazon.lambda.serialization.systemtextjson.2.0.1.nupkg.sha512",
         "amazon.lambda.serialization.systemtextjson.nuspec",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.xml"
@@ -2073,6 +2110,37 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -5178,7 +5246,10 @@
       "AWSSDK.Extensions.NETCore.Setup >= 3.3.100.1",
       "AWSSDK.S3 >= 3.3.110.58",
       "Amazon.Lambda.AspNetCoreServer >= 5.1.0",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5"
+      "Amazon.Lambda.Serialization.Json >= 1.7.0",
+      "Amazon.Lambda.Serialization.SystemTextJson >= 2.0.1",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -5189,11 +5260,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
+      "projectUniqueName": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
       "projectName": "WikiSpeedia",
-      "projectPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
+      "projectPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
       "packagesPath": "C:\\Users\\tom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\obj\\",
+      "outputPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5237,9 +5308,21 @@
             "target": "Package",
             "version": "[5.1.0, )"
           },
+          "Amazon.Lambda.Serialization.Json": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Amazon.Lambda.Serialization.SystemTextJson": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           }
         },
         "imports": [

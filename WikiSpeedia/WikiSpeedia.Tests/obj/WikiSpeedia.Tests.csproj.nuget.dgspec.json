@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj": {}
+    "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj": {
+    "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj",
         "projectName": "WikiSpeedia.Tests",
-        "projectPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj",
+        "projectPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia.Tests\\WikiSpeedia.Tests.csproj",
         "packagesPath": "C:\\Users\\tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia.Tests\\obj\\",
+        "outputPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj": {
-                "projectPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj"
+              "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj": {
+                "projectPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj"
               }
             }
           }
@@ -59,6 +59,14 @@
               "target": "Package",
               "version": "[1.1.0, )"
             },
+            "Amazon.Lambda.Serialization.Json": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Amazon.Lambda.Serialization.SystemTextJson": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
             "Amazon.Lambda.TestUtilities": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -70,6 +78,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[15.5.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "xunit": {
               "target": "Package",
@@ -102,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj": {
+    "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
+        "projectUniqueName": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
         "projectName": "WikiSpeedia",
-        "projectPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
+        "projectPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\WikiSpeedia.csproj",
         "packagesPath": "C:\\Users\\tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tom\\source\\repos\\WikiSpeedia\\WikiSpeedia\\obj\\",
+        "outputPath": "C:\\Users\\tom\\Documents\\bigchungus\\WikiSpeedia\\WikiSpeedia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -153,9 +165,21 @@
               "target": "Package",
               "version": "[5.1.0, )"
             },
+            "Amazon.Lambda.Serialization.Json": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Amazon.Lambda.Serialization.SystemTextJson": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
