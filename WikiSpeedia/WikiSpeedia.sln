@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WikiSpeedia", "WikiSpeedia\WikiSpeedia.csproj", "{662C62E0-5B0D-4DEC-B138-F3DFA671776A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WikiSpeedia.Tests", "WikiSpeedia.Tests\WikiSpeedia.Tests.csproj", "{CBA8B7FA-5C40-4ED6-9EBF-067790C4FA0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{662C62E0-5B0D-4DEC-B138-F3DFA671776A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662C62E0-5B0D-4DEC-B138-F3DFA671776A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662C62E0-5B0D-4DEC-B138-F3DFA671776A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662C62E0-5B0D-4DEC-B138-F3DFA671776A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA8B7FA-5C40-4ED6-9EBF-067790C4FA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA8B7FA-5C40-4ED6-9EBF-067790C4FA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA8B7FA-5C40-4ED6-9EBF-067790C4FA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA8B7FA-5C40-4ED6-9EBF-067790C4FA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB62072E-1DF4-490D-9183-14224E4F16FC}
+	EndGlobalSection
+EndGlobal
