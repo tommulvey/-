@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.Serialization;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -41,19 +42,16 @@ namespace WikiSpeedia.Controllers
             services.AddTransient<IPageRepository, PageRepository>();
         }
 
-        //// GET: api/<controller>
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
         // GET api/<controller>/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var result = PageRepository.GetPageTitleById(id);
-            return Ok(result);
+            if(result.Result == null){
+                return BadRequest("Invalid id #");
+            }
+            return Ok(result.Result);
+            //return Ok();
         }
 
         // most of our app is just reading. atleast for pages. only gets for now :) 

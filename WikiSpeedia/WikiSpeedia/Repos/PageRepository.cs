@@ -16,9 +16,16 @@ namespace WikiSpeedia.Repos
             Context = context;
         }
 
-        public async Task<Page> GetPageTitleById(int id)
+        public  IQueryable<Page> GetAllPages()
         {
-            return await Context.Pages.SingleOrDefaultAsync(e => e.id == id);
+            return Context.Pages.AsQueryable();
+        }
+        public async Task<string> GetPageTitleById(int id)
+        {
+            //return await Context.Pages.SingleOrDefaultAsync(e => e.id == id);
+
+            return await GetAllPages().Where(item => item.id == id).Select(item => item.title).FirstOrDefaultAsync();
+            //return await Context.Pages.SingleOrDefaultAsync(e => e.id == id);
         }
 
         public async Task<Page> GetPageIdByTitle(string title)
